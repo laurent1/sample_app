@@ -9,6 +9,7 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  # setter: current_user = user is actually a method call similar to this current_user=(user)
   def current_user=(user)
     @current_user = user
   end

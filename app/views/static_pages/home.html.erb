@@ -18,13 +18,15 @@
   </div>
 <% else %>
 	<div class="center hero-unit">
-	<h1>Welcome to the Sample App</h1>
-    <h2>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
+	<h1>Welcome to Simple Twitter</h1>
+    <h2>This application was developed by <%= link_to "Laurent Jacquot", about_path %></h2>
+    <h2>It is a minimalist Twitter­-style app developed with Ruby on Rails</h2>
+    <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+    <h2>It uses an industrial­ strength system for validating, storing,</h2>
+    <h2>and retrieving user information</h2>
+    <h2>that includes microposts and feeds.</h2>
     <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    <h2>Note: This is a promotional website for 
+      <%= link_to "Laurent Jacquot", about_path %>, software engineer.</h2>
 	</div>
-	<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %>

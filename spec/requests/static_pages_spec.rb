@@ -6,7 +6,7 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-    it { should have_selector('h1', text: 'Sample App') }
+    it { should have_selector('h1', text: 'Simple Twitter') }
     it { should have_selector('title', text: full_title('')) }
 
     describe "for signed-in users" do
@@ -61,7 +61,7 @@ describe "Static pages" do
     click_link "Sign in"
     page.should have_selector 'title', text: full_title('Sign in')
     click_link "About"
-    page.should have_selector 'title', text: full_title('About Us')
+    page.should have_selector 'title', text: full_title('About Laurent')
     click_link "Help"
     page.should have_selector 'title', text: full_title('Help')
     click_link "Contact"
@@ -69,7 +69,7 @@ describe "Static pages" do
     click_link "Home"
     click_link "Sign up now!"
     page.should have_selector 'title', :text => full_title('Sign up')
-    click_link "sample app"
-    page.should have_selector 'h1', text: 'Sample App'
+    click_link "Simple Twitter"
+    page.should have_selector 'h1', text: 'Simple Twitter'
   end
 end

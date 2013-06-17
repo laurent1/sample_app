@@ -1,9 +1,140 @@
-<% provide(:title, 'About Us') %>
+<% provide(:title, 'About Laurent') %>
 
-<h1>About Us</h1>
+<h1>About Laurent Jacquot</h1>
+<h2>I live in Orange County, California, I am a US citizen, and I am originally from France</h2>
+<h2>My focus as a software engineer is to build innovative and scalable web applications</h2>
+<h2>that are robust, maintainable, and performant.</h2>
+<br/>
+<h4>Specializations</h4>
+<ul>
+	<li id="red"><p>Production of web sites and Internet based software</p></li>
+	<li id="green"><p>Data management</p></li>
+	<li id="purple"><p>Object-Oriented Programming and Design</p></li>
+	<li id="blue"><p>Project Management</p></li>
+</ul>
+<br/>
+<h4>Technology Highlights</h4>
+<table id="technology_highlights">
+	<tr class="white">
+		<td class="skills">
+			<ul>
+				<li><p>Ruby on Rails</p></li>
+			</ul>
+		</td>
+		<td class="skills">
+			<ul>
+				<li><p>Java SE</p></li>
+			</ul>
+		</td>
+		<td class="skills">
+			<ul>
+				<li><p>SQL</p></li>
+			</ul>
+		</td>
+		<td class="skills">
+			<ul>
+				<li><p>Javascript</p></li>
+			</ul>
+		</td>
+		<td class="skills">
+			<ul>
+				<li><p>Mac OS X</p></li>
+			</ul>
+		</td>
+		<td class="skills">
+			<ul>
+				<li><p>PHP</p></li>
+			</ul>
+		</td>
+	</tr>
+</table>
+<br/>
+<h4>Education</h4>
 <p>
-  The <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  is a project to make a book and screencasts to teach web development
-  with <a href="http://rubyonrails.org/">Ruby on Rails</a>. This
-  is the sample application for the tutorial.
+	Bachelor of Science in Informatics (specialization: 
+	software engineering) from the <%= link_to "University of California Irvine (Donald Bren School of Information and Computer Sciences)",
+		"http://www.informatics.uci.edu/", target: "_blank" %>.
 </p>
+<ul>
+	<li>
+		<p><strong>Graduated Cum Laude</strong></p>
+	</li>
+	<li>
+		<p><em>What is Informatics? "Informatics is a discipline at the intersection of people, information, and technologies."</em></p>
+	</li>
+</ul>
+<br/>
+<h4>Projects</h4>
+<ul class="projects">
+	<li class="project_row">
+		<div class="project_photo_left">
+	        <%= link_to image_tag("Google_Demo.jpg", size: "330x450", alt: "Google Demo"), 
+	                    'https://github.com/laurent1/EZ-Dashboard-GA', target: "_blank" %>
+		</div>
+		<div class="project_text">
+	    	<p>
+		      	<strong>Google Analytics EZ­-Dashboard.</strong> April 2012 – March 2013.<br/>
+		      	<em>Received the “Dean's Award 2013 for the Top Five Projects”</em>
+		    </p>
+		    <p>
+		      	This project was sponsored by Google Inc and it involved the development of a GUI dashboard builder and of the version 2.0 of an API, named gadash, that powers the GUI dashboard builder.
+	    	</p>
+     		<p>
+      			The gadash API creates a single point of access to make custom Google Analytics charts and dashboards. Some of the improvement that were made includes code reductions, by following the principle of reusable object­oriented design, and charts visualization enhancement, for better user readability.
+	      	</p>
+	        <p>
+            	The GUI dashboard builder provides a rapid and easy way to developers and non­developers to create custom Google Analytics charts and dashboards that can be easily exported to there own domain.
+	       	</p>
+		</div>
+	</li>
+	<li class="project_row">
+		<div class="project_photo_right">
+			<%= link_to image_tag("Cloud5_Team.jpg", align: "right", size: "330x450", alt: "Cloud5 Demo"), 
+	            		'http://ingenuity.uci.edu/projects.php', target: "_blank" %>
+		</div>
+		<div class="project_text">
+			<p>
+				<strong>Autonomic Cloud Workflows.</strong> January 2013 – March 2013.<br/>
+				<em>Received the “Dean's Award 2013 for the Top Five Projects”</em>
+			</p>
+			<p>
+				This project is based on research by Dr. Craig Lee, from The Aerospace Corporation, to provide a more efficient way of automatically handling Service Level Agreements to better ensure that they are honored. Our team has developed a system that emulates work unit traffic as it processed via remote systems in cloud. The system allows user input that emulates many different working environments and provides statistical data that will further Dr. Lee and his colleagues research.
+			</p>
+		</div>
+	</li>
+	<li class="project_row">
+		<div class="project_photo_left">
+	        <%= image_tag("FabFlix.png", size: "330x350", alt: "FabFlix") %>
+		</div>
+		<div class="project_text">
+    		<p>
+    			<strong>FabFlix.</strong> January 2013 – March 2013.
+    		</p>
+    		<p>
+				In this database project, web­ based interfaces were created to allow customers to browse/search for movie information, add interesting movies to their shopping cart, and check out. 
+    		</p>
+    		<p>
+				User management functionalities were added to facilitate the creation of movie records, to enable the cleaning and the population of database.
+    		</p>
+    		<p>
+    			Technology used: JDBC, MySQL, Java servlets, JSP, stored procedures, batch procedures, connection pooling, SAX parsing, Database performance Tuning, Database user account management, Full Text Search, AJAX, jQuery, android application.
+    		</p>
+		</div>
+	</li>
+	<li class="project_row">
+		<div class="project_photo_right">
+			<%= image_tag("Simple_CMS.png", align: "right", size: "330x450", alt: "Simple CMS") %>
+		</div>
+		<div class="project_text">
+			<p>
+				<strong>Simple CMS.</strong> April 2013.<br/>
+			</p>
+			<p>
+				Following Kevin Skoglund’s Ruby on Rails tutorial, this project features the creation of a simple Content Management System which enables admin users to execute some tasks such as managing web pages contents and classifying them into categories.
+			</p>
+			<p>
+				This project covers the fundamentals to create rich web applications that can leverage the power of relational databases.
+			</p>
+		</div>
+	</li>
+</ul>

@@ -2,6 +2,9 @@ module SessionsHelper
 
 	def sign_in(user)
     cookies.permanent[:remember_token] = user.remember_token
+    # we use .self because we want to call the method current_user=(user), which assigns
+    # the instance varaible @current_user. Without .self, this would just be a local variable
+    # in the scope of the sign_in(user) method
     self.current_user = user
   end
 

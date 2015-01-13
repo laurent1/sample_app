@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
     else
       @feed_items = []
       render 'static_pages/home'
-    end 
+    end
 	end
 
 	def destroy

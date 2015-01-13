@@ -12,7 +12,7 @@ FactoryGirl.define do
 
   factory :micropost do
     content "Lorem ipsum"
-    user
+    user  # this is a method (from relation). FactoryGirl.create(:micropost, :user @user, created_at: 1.day.ago)
   end
 
 end

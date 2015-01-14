@@ -3,9 +3,9 @@ require 'spec_helper'
 describe User do
 
   before do
-    @user = User.new( name:     "Example User", 
-                      email:    "user@example.com", 
-                      password: "foobar", 
+    @user = User.new( name:     "Example User",
+                      email:    "user@example.com",
+                      password: "foobar",
                       password_confirmation: "foobar")
   end
 
@@ -38,7 +38,7 @@ describe User do
       expect do
         User.new(admin: true)
       end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
-    end    
+    end
   end
 
   describe "with admin attribute set to 'true'" do
@@ -73,7 +73,7 @@ describe User do
         @user.email = invalid_address
         @user.should_not be_valid
       end
-    end 
+    end
   end
 
   describe "when email format is valid" do
@@ -83,13 +83,16 @@ describe User do
         @user.email = valid_address
         @user.should be_valid
       end
-    end 
+    end
   end
 
   describe "when email address is already taken" do
     before do
-      user_with_same_email = @user.dup
-      user_with_same_email.email = @user.email.upcase
+      user_with_same_email = User.new(
+        name:     "Example Other User",
+        email:    @user.email.upcase,
+        password: "foobar",
+        password_confirmation: "foobar")
       user_with_same_email.save
     end
     it { @user.should_not be_valid }
@@ -135,7 +138,7 @@ describe User do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
   end
-  
+
   describe "micropost associations" do
     before { @user.save }
     let!(:older_micropost) do
@@ -181,7 +184,7 @@ describe User do
   end
 
   describe "following" do
-    let(:other_user) { FactoryGirl.create(:user) }    
+    let(:other_user) { FactoryGirl.create(:user) }
     before do
       @user.save
       @user.follow!(other_user)
